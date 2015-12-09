@@ -13,7 +13,7 @@ const http = require('http');
 const hostname = '127.0.0.1';
 const port = 1338;
 const DEBUG = false;
-var connections = 2000;
+var connections = 3000;
 var active=0;
 
 http.createServer((req, response) => {
@@ -21,12 +21,12 @@ http.createServer((req, response) => {
 
     var options = {
         host: 'localhost',
-        port: 1333, // from script: http/random.js
+        port: 2001, // from script: http/sequential.js
         path: '/',
         method: 'GET'
     };
 
-    for (var i = 0; i < connections; i++) {
+    for (var i = 0; i <= connections; i++) {
         active++;
         // совершение запроса с последующим его завершением
         // для закрытия соединения
