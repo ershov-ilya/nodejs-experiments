@@ -20,6 +20,7 @@ function randomInt (low, high) {
 http.createServer((req, res) => {
     res.writeHead(200, { 'Content-Type': 'text/plain' });
     res.end(randomInt(0,999999)+'\n');
+    //res.end(555555+'\n');
 }).listen(port, hostname, () => {
     console.log(`Server running at http://${hostname}:${port}/`);
 });
