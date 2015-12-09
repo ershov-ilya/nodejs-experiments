@@ -9,7 +9,7 @@
  */
 
 var spawn = require('child_process').spawn,
-    pwd = spawn('pwd');
+    pwd = spawn('ls', ['../../../']); // Bash command: ls ../../../
 
 pwd.stdout.on('data', function (data) {
     console.log('stdout: ' + data);
