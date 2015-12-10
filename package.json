@@ -4,6 +4,7 @@
   "description": "simple tests",
   "main": "index.js",
   "dependencies": {
+    "async": "^1.5.0",
     "jsdom": "^7.2.0"
   },
   "devDependencies": {},
